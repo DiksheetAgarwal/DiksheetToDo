@@ -75,7 +75,7 @@ router.post(
         const user = req.user;
         user.token = [];
         await user.save();
-    res.redirect("/home");
+    res.redirect("/");
 })
 router.get(
     "/user",
