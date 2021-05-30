@@ -182,7 +182,7 @@ router.post(
                 id : user._id
             }
             const token = jwt.sign(payload, secret, {expiresIn: '15m'});
-            const link = '/resetpassword/' + user.id +'/' + token;
+            const link = 'https://diksheetodo-app.herokuapp.com/resetpassword/' + user.id +'/' + token;
             // console.log(link);
             const mailoptions = {
                 from : process.env.EMAIL || 'prankeymonkey98@gmail.com',
