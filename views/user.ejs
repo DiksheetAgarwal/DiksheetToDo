@@ -1,0 +1,29 @@
+
+<%- include ("partials/header.ejs")%>
+
+    <h1><%=user.name%> Tasks</h1>
+
+    <% user.tasks.forEach(function(task){ %>
+        <div>
+            <b><%=task.name%></b>
+            <br>
+            <%=task.description%>
+            <br>
+            <form action="/tasks/<%=task._id%>/edit" method="GET">
+                <button>Edit</button>
+            </form>
+            <form action="/delete/<%=task._id%>?_method=DELETE" method="POST" >
+                <button>Delete</button>
+            </form>
+            <br>
+            <br>
+        </div>      
+    <% }) %>
+
+    <a href="/newTask">Add new task</a>
+
+    <form action="/logOut" method="POST">
+        <button>Logout</button>
+    </form>
+    
+    <%- include ("partials/footer.ejs")%>
