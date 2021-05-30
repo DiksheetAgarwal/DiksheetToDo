@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 
 mongoose.connect(
-    'mongodb+srv://Diksheet:Diksheet@cluster0.sgxuy.mongodb.net/myFirstDatabase?retryWrites=true&w=majority',
+    'mongodb+srv://Diksheet:Diksheet@cluster0.sgxuy.mongodb.net/todo?retryWrites=true&w=majority',
     {
         useNewUrlParser: true,
         useCreateIndex: true,
