@@ -12,8 +12,8 @@ const express = require('express'),
     const transporter = nodemailer.createTransport({
         service : 'gmail',
         auth : {
-            user : process.env.EMAIL || 'prankeymonkey98@gmail.com',
-            pass : process.env.PASSWORD || 'prankey9monkey8',
+            user : process.env.EMAIL,
+            pass : process.env.PASSWORD,
         }
     })
 
@@ -187,7 +187,7 @@ router.post(
             const link = 'https://diksheetodo-app.herokuapp.com/resetpassword/' + user.id +'/' + token;
             // console.log(link);
             const mailoptions = {
-                from : process.env.EMAIL || 'prankeymonkey98@gmail.com',
+                from : process.env.EMAIL,
                 to : user.email,
                 subject : 'test mail',
                 text : link
