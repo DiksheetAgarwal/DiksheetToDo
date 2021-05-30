@@ -7,7 +7,7 @@ const generateAuthToken = async function(user){
             { _id: user._id.toString() },
             '_laden_da',
         );
-        user.token.push(token);
+        user.token.push(token); 
         await user.save();
         return token;       
 }
