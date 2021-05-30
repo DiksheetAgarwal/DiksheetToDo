@@ -33,8 +33,10 @@ router.post("/signUp", async(req, res)=>{
             password,
         })
         const token = await generateAuthToken(user);
+        console.log(user);
     res.redirect("/signIn");
     } catch (error) {
+        console.log(user);
         res.send(error);
     }
 })    
