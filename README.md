@@ -11,3 +11,5 @@ Steps to run locally
 Link of the site hosted on heroku 
 
 https://diksheetodo-app.herokuapp.com/
+(Currently nodemailer is not working on heroku, since its hosted in US)
+(Its working fine locally, in India)
